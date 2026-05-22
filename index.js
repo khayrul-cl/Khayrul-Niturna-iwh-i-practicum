@@ -10,7 +10,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// * Please DO NOT INCLUDE the private app access token in your repo. Don't do this practicum in your normal account.
 const PRIVATE_APP_ACCESS = process.env.ACCESS_TOKEN;
 const CUSTOM_OBJECT_TYPE = process.env.CUSTOM_OBJECT_TYPE;
 
@@ -73,7 +72,7 @@ app.post('/update-cobj', async (req, res) => {
         start_date: req.body.start_date,
       },
     };
-    console.log(properties.venue);
+    //console.log(properties.venue);
     await axios.post(
       `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}`,
       newRecord,

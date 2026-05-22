@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= pageTitle
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    div.form-wrapper
+      h1 Add Event Record
+
+      a(href="/") Return to the homepage
+
+      form(action="/update-cobj", method="POST")
+        label(for="name") Name
+        input#name(type="text", name="name", required)
+
+        label(for="venue") Venue
+        input#venue(type="text", name="venue", required)
+
+        label(for="start_date") Start Date
+        input#start_date(type="date", name="start_date", required)
+
+        input(type="submit", value="Submit")

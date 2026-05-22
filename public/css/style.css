@@ -56,3 +56,27 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin: 1rem;
+    font-size: 28px;
+}
+
+.custom-table th {
+    background-color: pink;
+    padding: 4px 20px;
+    border: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.custom-table td {
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+a {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 28px;
+}

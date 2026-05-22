@@ -2,25 +2,25 @@ doctype html
 html
   head
     title= pageTitle
-    link(rel="stylesheet", href="public/css/style.css")
+    link(rel="stylesheet", href="/css/style.css")
   body
-    h1 Custom Object Table
+    h1 Events Table
 
-    a.add-link(href="/update-cobj") Add to this table
+    a(href="/update-cobj") Add/Update this table
 
     table.custom-table
       thead
         tr
           th Name
-          th Publisher
-          th Price
+          th Venue
+          th Start Date
       tbody
         if records && records.length
           each record in records
             tr
               td= record.properties.name
-              td= record.properties.publisher
-              td= record.properties.price
+              td= record.properties.venue
+              td= record.properties.start_date
         else
           tr
             td(colspan="3") No records found.
